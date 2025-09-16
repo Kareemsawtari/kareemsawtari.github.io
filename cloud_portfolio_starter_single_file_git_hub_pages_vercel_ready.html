@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kareem Sawtari · Cloud & Software Engineer</title>
+  <meta name="description" content="Portfolio of Kareem Sawtari – Cloud, DevOps, and Software Engineering projects, write-ups, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            primary: {
+              50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
+              400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
+              800: '#3730a3', 900: '#312e81'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+  <!-- SEO / Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kareem Sawtari",
+    "url": "https://example.com",
+    "sameAs": ["https://github.com/your-github", "https://www.linkedin.com/in/your-linkedin"],
+    "jobTitle": "Cloud & Software Engineer",
+    "worksFor": {"@type": "Organization", "name": "Freelance"}
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-900 antialiased">
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 border-b">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-extrabold tracking-tight text-lg">KS</a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#projects" class="hover:text-primary-600">Projects</a>
+        <a href="#skills" class="hover:text-primary-600">Skills</a>
+        <a href="#writing" class="hover:text-primary-600">Writing</a>
+        <a href="#contact" class="hover:text-primary-600">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#" class="inline-flex items-center rounded-xl border px-3 py-1.5 text-sm hover:bg-slate-50">Resume</a>
+        <a href="https://github.com/your-github" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-xl bg-primary-600 px-3 py-1.5 text-sm font-semibold text-white shadow hover:bg-primary-700">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary-50 to-white"></div>
+    <div class="relative max-w-6xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">Cloud & Software Engineer crafting secure, scalable systems.</h1>
+        <p class="mt-4 text-slate-600 text-lg">I design and ship cloud-native apps with IaC, CI/CD, and strong observability. Currently exploring serverless, containers, and data pipelines on AWS.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center rounded-xl bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-primary-700">View Projects</a>
+          <a href="#contact" class="inline-flex items-center rounded-xl border px-4 py-2 text-sm hover:bg-slate-50">Get in touch</a>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2 text-xs text-slate-600">
+          <span class="inline-flex items-center rounded-full border px-2 py-1">AWS · Terraform · Docker</span>
+          <span class="inline-flex items-center rounded-full border px-2 py-1">Serverless · DynamoDB</span>
+          <span class="inline-flex items-center rounded-full border px-2 py-1">GitHub Actions · CloudWatch</span>
+        </div>
+      </div>
+      <div class="md:pl-8">
+        <div class="rounded-2xl border shadow-sm p-4 bg-white">
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div class="rounded-xl border p-3">
+              <div class="text-slate-500">Deployed</div>
+              <div class="text-2xl font-bold">12+</div>
+            </div>
+            <div class="rounded-xl border p-3">
+              <div class="text-slate-500">Uptime (last 30d)</div>
+              <div class="text-2xl font-bold">99.9%</div>
+            </div>
+            <div class="rounded-xl border p-3">
+              <div class="text-slate-500">Pipelines</div>
+              <div class="text-2xl font-bold">CI/CD</div>
+            </div>
+            <div class="rounded-xl border p-3">
+              <div class="text-slate-500">Certs</div>
+              <div class="text-2xl font-bold">AWS x5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold">Featured Projects</h2>
+      <a href="https://github.com/your-github?tab=repositories" target="_blank" rel="noreferrer" class="text-sm text-primary-700 hover:underline">All repos →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Project Card Template -->
+      <article class="group rounded-2xl border shadow-sm hover:shadow-md transition bg-white overflow-hidden">
+        <div class="h-36 bg-gradient-to-br from-primary-100 to-white"></div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Cloud Resume Challenge</h3>
+          <p class="mt-1 text-sm text-slate-600">Serverless resume site on AWS (S3, CloudFront, Route 53) with visitor counter (Lambda, API Gateway, DynamoDB) and CI/CD via GitHub Actions.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full border px-2 py-1">S3</span>
+            <span class="rounded-full border px-2 py-1">CloudFront</span>
+            <span class="rounded-full border px-2 py-1">Lambda</span>
+            <span class="rounded-full border px-2 py-1">DynamoDB</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Live</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Repo</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Write‑up</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl border shadow-sm hover:shadow-md transition bg-white overflow-hidden">
+        <div class="h-36 bg-gradient-to-br from-primary-100 to-white"></div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">ECS Fargate · Terraform</h3>
+          <p class="mt-1 text-sm text-slate-600">Dockerized web app on ECS Fargate with ALB, autoscaling, logs/metrics, and full IaC in Terraform. Blue/green via GitHub Actions.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full border px-2 py-1">ECS</span>
+            <span class="rounded-full border px-2 py-1">Terraform</span>
+            <span class="rounded-full border px-2 py-1">ALB</span>
+            <span class="rounded-full border px-2 py-1">GitHub Actions</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Live</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Repo</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Write‑up</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="group rounded-2xl border shadow-sm hover:shadow-md transition bg-white overflow-hidden">
+        <div class="h-36 bg-gradient-to-br from-primary-100 to-white"></div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Serverless To‑Do API</h3>
+          <p class="mt-1 text-sm text-slate-600">JWT‑secured CRUD API with API Gateway, Lambda, and DynamoDB. Includes IaC, tests, and dashboards.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full border px-2 py-1">API Gateway</span>
+            <span class="rounded-full border px-2 py-1">Lambda</span>
+            <span class="rounded-full border px-2 py-1">DynamoDB</span>
+            <span class="rounded-full border px-2 py-1">CloudWatch</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Live</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Repo</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Write‑up</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Skills</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-sm">
+      <div class="rounded-2xl border p-5">
+        <h3 class="font-semibold">Cloud & Infra</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>AWS (EC2, S3, CloudFront, Lambda, API Gateway, DynamoDB, RDS)</li>
+          <li>Terraform / CDK</li>
+          <li>VPC, IAM, Networking, Security</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <h3 class="font-semibold">DevOps</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>Docker, ECS/Fargate, EKS</li>
+          <li>GitHub Actions / CodePipeline</li>
+          <li>Observability (CloudWatch, OpenTelemetry)</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <h3 class="font-semibold">Apps & Data</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>Node.js, Python, Go</li>
+          <li>REST/GraphQL APIs</li>
+          <li>Glue, Athena, QuickSight</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Writing -->
+  <section id="writing" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Writing</h2>
+    <div class="space-y-4">
+      <a class="block rounded-2xl border p-5 hover:bg-slate-50" href="#">
+        <h3 class="font-semibold">How I built a serverless resume site on AWS</h3>
+        <p class="text-sm text-slate-600 mt-1">Architecture, cost breakdown, and IaC for a production‑grade static site.</p>
+      </a>
+      <a class="block rounded-2xl border p-5 hover:bg-slate-50" href="#">
+        <h3 class="font-semibold">ECS vs EKS: picking the right orchestration for small teams</h3>
+        <p class="text-sm text-slate-600 mt-1">Trade‑offs, complexity budgets, and when managed services shine.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="rounded-2xl border p-8 bg-white">
+      <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+      <p class="mt-2 text-slate-600">Open to roles in Cloud/DevOps/Platform Engineering. Reach out if you want a fast, reproducible deployment with clean IaC.</p>
+      <form name="contact" class="mt-6 grid md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Thanks! Replace this with a real form backend later.');">
+        <input type="text" placeholder="Your name" class="rounded-xl border px-4 py-2" required>
+        <input type="email" placeholder="Email address" class="rounded-xl border px-4 py-2" required>
+        <textarea placeholder="Message" class="md:col-span-2 rounded-xl border px-4 py-2 h-28" required></textarea>
+        <button class="md:col-span-2 inline-flex items-center justify-center rounded-xl bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-primary-700">Send</button>
+      </form>
+      <div class="mt-6 text-sm text-slate-600">
+        <span class="mr-4">Email: <a class="text-primary-700 hover:underline" href="mailto:you@example.com">you@example.com</a></span>
+        <span class="mr-4">LinkedIn: <a class="text-primary-700 hover:underline" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noreferrer">/in/your-linkedin</a></span>
+        <span>GitHub: <a class="text-primary-700 hover:underline" href="https://github.com/your-github" target="_blank" rel="noreferrer">@your-github</a></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 border-t">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-3">
+      <p>© <span id="year"></span> Kareem Sawtari. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#home" class="hover:text-primary-700">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
