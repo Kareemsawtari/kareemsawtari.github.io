@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kareem Sawtari · Cloud & Software Engineer</title>
-  <meta name="description" content="Portfolio of Kareem Sawtari – Cloud, DevOps, and Software Engineering projects, write-ups, and contact." />
+  <meta name="description" content="Portfolio of Kareem Sawtari – Cloud, DevOps, and Software Engineering projects and contact." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -28,6 +29,18 @@
   <style>
     html { scroll-behavior: smooth; }
   </style>
+  <!-- SEO / Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kareem Sawtari",
+    "url": "https://kareemsawtari.github.io",
+    "sameAs": ["https://github.com/Kareemsawtari", "https://www.linkedin.com/in/kareem-sawtari-060574253/"],
+    "jobTitle": "Cloud & Software Engineer",
+    "worksFor": {"@type": "Organization", "name": "Freelance"}
+  }
+  </script>
 </head>
 <body class="bg-white text-slate-900 antialiased">
   <!-- Nav -->
@@ -35,15 +48,13 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#home" class="font-extrabold tracking-tight text-lg">KS</a>
       <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#experience" class="hover:text-primary-600">Professional Experience</a>
         <a href="#projects" class="hover:text-primary-600">Projects</a>
         <a href="#skills" class="hover:text-primary-600">Skills</a>
-        <a href="#writing" class="hover:text-primary-600">Writing</a>
         <a href="#contact" class="hover:text-primary-600">Contact</a>
       </nav>
       <div class="flex items-center gap-3">
-        <!-- Resume Button -->
         <a href="https://kareemsawtari.github.io/resume.pdf" target="_blank" class="inline-flex items-center rounded-xl border px-3 py-1.5 text-sm hover:bg-slate-50">Resume</a>
-        <!-- GitHub Button -->
         <a href="https://github.com/Kareemsawtari" target="_blank" rel="noreferrer" class="inline-flex items-center rounded-xl bg-primary-600 px-3 py-1.5 text-sm font-semibold text-white shadow hover:bg-primary-700">GitHub</a>
       </div>
     </div>
@@ -91,13 +102,115 @@
     </div>
   </section>
 
-  <!-- The rest of the sections remain unchanged -->
+  <!-- Professional Experience -->
+  <section id="experience" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Professional Experience</h2>
+    <div class="space-y-6">
+      <article class="rounded-2xl border bg-white shadow-sm p-6">
+        <h3 class="text-lg font-semibold">SCIGLOB LLC. · Software Engineer Intern</h3>
+        <p class="text-sm text-slate-600">Columbia, MD | Apr 2024 - Sep 2024</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+          <li>Collaborated with NASA and ESA experts on the Pandonia Global Network to advance atmospheric research and remote sensing innovation.</li>
+          <li>Developed a real-time data visualisation GUI for the IMX-5™ 10-DOF sensor module, integrating AHRS and INS systems for enhanced sensor monitoring and interaction.</li>
+          <li>Designed a GUI to display live camera feeds with adjustable settings, including zoom options, organised into three main sections: Feed, Camera Settings, and Zoom Options.</li>
+          <li>Developed a user-friendly interface to list available devices, enabling users to select and execute scripts for the chosen device efficiently.</li>
+          <li>Managed hardware devices including setup, configuration, and troubleshooting to ensure seamless integration with software systems.</li>
+        </ul>
+      </article>
+      <article class="rounded-2xl border bg-white shadow-sm p-6">
+        <h3 class="text-lg font-semibold">SEMPER CAPITAL LTD. · Web Developer Intern</h3>
+        <p class="text-sm text-slate-600">Toronto, ON | Jan 2023 - Apr 2023</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-700 list-disc list-inside">
+          <li>Developed a web platform for scheduling, utilising technologies such as CSS and JavaScript.</li>
+          <li>Created and maintained technical documentation.</li>
+          <li>Worked closely with other team members in such tasks as troubleshooting and debugging.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 
+  <!-- Projects -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="flex items-end justify-between mb-6">
+      <h2 class="text-2xl md:text-3xl font-bold">Featured Projects</h2>
+      <a href="https://github.com/Kareemsawtari?tab=repositories" target="_blank" rel="noreferrer" class="text-sm text-primary-700 hover:underline">All repos →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Project cards unchanged -->
+      <article class="group rounded-2xl border shadow-sm hover:shadow-md transition bg-white overflow-hidden">
+        <div class="h-36 bg-gradient-to-br from-primary-100 to-white"></div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Cloud Resume Challenge</h3>
+          <p class="mt-1 text-sm text-slate-600">Serverless resume site on AWS (S3, CloudFront, Route 53) with visitor counter (Lambda, API Gateway, DynamoDB) and CI/CD via GitHub Actions.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="rounded-full border px-2 py-1">S3</span>
+            <span class="rounded-full border px-2 py-1">CloudFront</span>
+            <span class="rounded-full border px-2 py-1">Lambda</span>
+            <span class="rounded-full border px-2 py-1">DynamoDB</span>
+          </div>
+          <div class="mt-4 flex gap-3">
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Live</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Repo</a>
+            <a class="text-sm font-medium text-primary-700 hover:underline" href="#">Write‑up</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl md:text-3xl font-bold mb-6">Skills</h2>
+    <div class="grid md:grid-cols-3 gap-6 text-sm">
+      <div class="rounded-2xl border p-5">
+        <h3 class="font-semibold">Cloud & Infra</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>AWS (EC2, S3, CloudFront, Lambda, API Gateway, DynamoDB, RDS)</li>
+          <li>Terraform / CDK</li>
+          <li>VPC, IAM, Networking, Security</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <h3 class="font-semibold">DevOps</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>Docker, ECS/Fargate, EKS</li>
+          <li>GitHub Actions / CodePipeline</li>
+          <li>Observability (CloudWatch, OpenTelemetry)</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5">
+        <h3 class="font-semibold">Apps & Data</h3>
+        <ul class="mt-3 space-y-2 text-slate-700 list-disc list-inside">
+          <li>Node.js, Python, Go</li>
+          <li>REST/GraphQL APIs</li>
+          <li>Glue, Athena, QuickSight</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+    <div class="rounded-2xl border p-8 bg-white">
+      <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+      <p class="mt-2 text-slate-600">Open to roles in Cloud/DevOps/Platform Engineering. Reach out if you want a fast, reproducible deployment with clean IaC.</p>
+      <form name="contact" class="mt-6 grid md:grid-cols-2 gap-4" onsubmit="event.preventDefault(); alert('Thanks! Replace this with a real form backend later.');">
+        <input type="text" placeholder="Your name" class="rounded-xl border px-4 py-2" required>
+        <input type="email" placeholder="Email address" class="rounded-xl border px-4 py-2" required>
+        <textarea placeholder="Message" class="md:col-span-2 rounded-xl border px-4 py-2 h-28" required></textarea>
+        <button class="md:col-span-2 inline-flex items-center justify-center rounded-xl bg-primary-600 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-primary-700">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="py-10 border-t">
-    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-500 flex flex-col md:flex-row items-center justify-between gap-3">
+    <div class="max-w-6xl mx-auto px-4 text-sm text-slate-600 flex flex-col md:flex-row items-center justify-between gap-3">
       <p>© <span id="year"></span> Kareem Sawtari. All rights reserved.</p>
       <div class="flex gap-4">
-        <a href="#home" class="hover:text-primary-700">Back to top ↑</a>
+        <a href="mailto:abdulkareem-sawtari@hotmail.com" class="text-primary-700 hover:underline">abdulkareem-sawtari@hotmail.com</a>
+        <a href="https://www.linkedin.com/in/kareem-sawtari-060574253/" target="_blank" class="text-primary-700 hover:underline">LinkedIn</a>
+        <a href="https://github.com/Kareemsawtari" target="_blank" class="text-primary-700 hover:underline">GitHub</a>
       </div>
     </div>
   </footer>
